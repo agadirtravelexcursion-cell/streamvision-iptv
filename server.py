@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""StreamVision IPTV — Local server with built-in CORS proxy"""
+"""StreamVision IPTV — Server with built-in CORS proxy (localhost + Render)"""
 import http.server
 import socketserver
 import urllib.request
@@ -8,7 +8,7 @@ import json
 import sys
 import os
 
-PORT = 8080
+PORT = int(os.environ.get('PORT', 8080))
 DIR = os.path.dirname(os.path.abspath(__file__))
 XTREAM_HOST = "http://smarters2026.sbs:8080"
 
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     print(f"""
 ╔══════════════════════════════════════╗
 ║    🎬 StreamVision IPTV Server       ║
-║    http://localhost:{PORT}              ║
+║    Port: {PORT}                        ║
 ║                                      ║
 ║    Proxy: /api/xtream?action=...     ║
 ║    Static: {DIR}
