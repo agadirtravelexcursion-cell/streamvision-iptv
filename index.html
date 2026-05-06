@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StreamVision IPTV — Premium IPTV Service | 20,000+ Channels, VOD & Series | Smarters Player</title>
+  <meta name="description" content="StreamVision IPTV — Premium IPTV service with 20,000+ live channels, 80,000+ movies & series VOD. 55€/year. Works on all devices: Smart TV, Android, iOS, MAG, Firestick. Instant activation, 24/7 support.">
+  <meta name="keywords" content="IPTV, IPTV premium, IPTV France, IPTV Maroc, Smarters Player, IPTV subscription, live TV, VOD, series, movies, streaming, 4K, beIN Sports, Canal+, Xtream Codes">
+  <meta name="author" content="StreamVision IPTV">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="StreamVision IPTV — Premium IPTV | 20,000+ Channels, VOD & Series">
+  <meta property="og:description" content="Premium IPTV service with 20,000+ live channels, 80,000+ movies & series. 55€/year. Works on all devices.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://streamvision.tv">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://streamvision.tv">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/video.js@8.10.0/dist/video-js.min.css" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "StreamVision IPTV",
+    "description": "Premium IPTV service with 20,000+ live channels, 80,000+ movies and series VOD",
+    "offers": {
+      "@type": "Offer",
+      "price": "55",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1250"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon"><i class="fas fa-play"></i></div>
+      <span>StreamVision</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+      <a href="#telechargements" data-fr="Téléchargements" data-en="Downloads">Téléchargements</a>
+      <a href="#tutoriels" data-fr="Tutoriels" data-en="Tutorials">Tutoriels</a>
+      <a href="#abonnement" data-fr="Abonnement" data-en="Subscription">Abonnement</a>
+      <a href="#faq" data-fr="FAQs" data-en="FAQs">FAQs</a>
+      <a href="#services" data-fr="Services" data-en="Services">Services</a>
+      <a href="#revendeur" data-fr="Revendeur" data-en="Reseller">Reseller</a>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-social">
+        <a href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://wa.me/212630463227" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="lang-switcher">
+        <button class="active" onclick="setLang('fr')">FR</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#abonnement" class="btn btn-accent btn-sm" data-fr="Commander" data-en="Order Now">Commander</a>
+      <button class="mobile-toggle" onclick="toggleMobileNav()"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" onclick="toggleMobileNav()"><i class="fas fa-times"></i></button>
+  <a href="#accueil" onclick="toggleMobileNav()">Accueil</a>
+  <a href="#telechargements" onclick="toggleMobileNav()">Téléchargements</a>
+  <a href="#tutoriels" onclick="toggleMobileNav()">Tutoriels</a>
+  <a href="#abonnement" onclick="toggleMobileNav()">Abonnement</a>
+  <a href="#faq" onclick="toggleMobileNav()">FAQs</a>
+  <a href="#services" onclick="toggleMobileNav()">Services</a>
+  <a href="#revendeur" onclick="toggleMobileNav()">Reseller</a>
+  <a href="#abonnement" class="btn btn-accent" onclick="toggleMobileNav()">Commander maintenant</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+  <div class="hero-bg">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> <span data-fr="Service Actif" data-en="Service Active">Service Actif</span></div>
+      <h1 data-fr="IPTV Premium<br><span>20,000+ Chaînes</span>" data-en="Premium IPTV<br><span>20,000+ Channels</span>">IPTV Premium<br><span>20,000+ Chaînes</span></h1>
+      <p data-fr="Offrant des solutions premium dans le monde entier pour une expérience de streaming fluide et un support client exceptionnel" data-en="Offering premium solutions worldwide for smooth streaming and exceptional support">Offrant des solutions premium dans le monde entier pour une expérience de streaming fluide et un support client exceptionnel</p>
+      <div class="hero-buttons">
+        <a href="tel:+212630463227" class="btn btn-outline btn-lg"><i class="fas fa-headset"></i> <span data-fr="Support" data-en="Support">Support</span></a>
+        <a href="#abonnement" class="btn btn-accent btn-lg" data-fr="Commander maintenant" data-en="Order Now">Commander maintenant</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="number">20,000+</span><span class="label" data-fr="Chaînes" data-en="Channels">Chaînes</span></div>
+        <div class="hero-stat"><span class="number">55€</span><span class="label" data-fr="/an" data-en="/year">/an</span></div>
+        <div class="hero-stat"><span class="number">24/7</span><span class="label" data-fr="Support" data-en="Support">Support</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="price-card">
+        <div class="price-label" data-fr="Abonnement Annuel" data-en="Annual Subscription">Abonnement Annuel</div>
+        <div class="price-amount"><span>€</span>55</div>
+        <div class="price-period" data-fr="par an — Économisez 53€ !" data-en="per year — Save 53€!">par an — Économisez 53€ !</div>
+        <ul class="price-features">
+          <li><span class="check">✓</span> <span data-fr="20,000+ chaînes en direct" data-en="20,000+ live channels">20,000+ chaînes en direct</span></li>
+          <li><span class="check">✓</span> <span data-fr="80,000+ films et séries VOD" data-en="80,000+ movies & series">80,000+ films et séries VOD</span></li>
+          <li><span class="check">✓</span> <span data-fr="Qualité 4K / FHD / HD" data-en="4K / FHD / HD quality">Qualité 4K / FHD / HD</span></li>
+          <li><span class="check">✓</span> <span data-fr="Anti-freeze technology" data-en="Anti-freeze technology">Anti-freeze technology</span></li>
+          <li><span class="check">✓</span> <span data-fr="Tous les appareils" data-en="All devices">Tous les appareils</span></li>
+          <li><span class="check">✓</span> <span data-fr="Activation instantanée" data-en="Instant activation">Activation instantanée</span></li>
+        </ul>
+        <a href="#abonnement" class="btn btn-primary btn-lg" style="width:100%" data-fr="Commander Maintenant" data-en="Order Now">Commander Maintenant</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIVE PLAYER ===== -->
+<section class="section player-section" id="player">
+  <div class="container">
+    <h2 class="section-title text-gradient">📺 Live IPTV Player</h2>
+    <p class="section-subtitle" data-fr="Regardez vos chaînes, films et séries en direct" data-en="Watch your channels, movies and series live">Regardez vos chaînes, films et séries en direct</p>
+
+    <!-- Player Tabs -->
+    <div class="player-tabs">
+      <button class="player-tab active" onclick="switchPlayerTab('live', this)"><i class="fas fa-broadcast-tower"></i> <span data-fr="Chaînes Live" data-en="Live TV">Chaînes Live</span></button>
+      <button class="player-tab" onclick="switchPlayerTab('movies', this)"><i class="fas fa-film"></i> <span data-fr="Films" data-en="Movies">Films</span></button>
+      <button class="player-tab" onclick="switchPlayerTab('series', this)"><i class="fas fa-tv"></i> <span data-fr="Séries" data-en="Series">Séries</span></button>
+    </div>
+
+    <div class="player-layout">
+
+      <!-- Sidebar -->
+      <div class="player-sidebar">
+
+        <!-- LIVE PANEL -->
+        <div id="livePanel">
+          <div class="cat-pills" id="catPills">
+            <div class="cat-pill active" onclick="switchChannelCat('all',this)">📺 <span data-fr="Tous" data-en="All">Tous</span></div>
+          </div>
+          <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Rechercher..." id="channelSearch" oninput="filterChannels()">
+          </div>
+          <div class="channel-list" id="channelList">
+            <div class="channel-loading"><i class="fas fa-spinner fa-spin"></i></div>
+          </div>
+        </div>
+
+        <!-- MOVIES PANEL -->
+        <div id="moviesPanel" class="hidden">
+          <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Rechercher un film..." id="vodSearch" oninput="filterVod()">
+          </div>
+          <div class="channel-list" id="vodList">
+            <div class="vod-group-title">📂 <span data-fr="Sélectionnez une catégorie" data-en="Select a category">Sélectionnez une catégorie</span></div>
+            <div id="vodCategories"></div>
+          </div>
+        </div>
+
+        <!-- SERIES PANEL -->
+        <div id="seriesPanel" class="hidden">
+          <div class="sidebar-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Rechercher une série..." id="seriesSearch" oninput="filterSeries()">
+          </div>
+          <div class="channel-list" id="seriesList">
+            <div class="vod-group-title">📂 <span data-fr="Sélectionnez une catégorie" data-en="Select a category">Sélectionnez une catégorie</span></div>
+            <div id="seriesCategories"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Main Player -->
+      <div class="player-main">
+        <div class="video-wrapper">
+          <video id="streamPlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="none" data-setup='{}'>
+            <p class="vjs-no-js">Please enable JavaScript.</p>
+          </video>
+          <div class="player-overlay" id="playerOverlay">
+            <div class="overlay-content">
+              <div class="overlay-icon"><i class="fas fa-play-circle"></i></div>
+              <h3 data-fr="Sélectionnez un contenu" data-en="Select content">Sélectionnez un contenu</h3>
+              <p data-fr="Choisissez une chaîne, un film ou une série" data-en="Choose a channel, movie or series">Choisissez une chaîne, un film ou une série</p>
+            </div>
+          </div>
+        </div>
+        <div class="player-info-bar">
+          <div class="now-playing">
+            <div class="ldot"></div>
+            <span>En direct</span>
+            <strong id="nowPlayingChannel">—</strong>
+          </div>
+          <div class="pcount" id="channelCount"></div>
+          <div class="pactions">
+            <button class="btn-icon" onclick="togglePiP()" title="PiP"><i class="fas fa-clone"></i></button>
+            <button class="btn-icon" onclick="toggleFullscreen()" title="Fullscreen"><i class="fas fa-expand"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="section features" id="services">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Services IPTV Premium" data-en="Premium IPTV Services">Services IPTV Premium</h2>
+    <p class="section-subtitle" data-fr="Découvrez nos solutions IPTV haut de gamme" data-en="Discover our high-end IPTV solutions">Découvrez nos solutions IPTV haut de gamme</p>
+    <div class="features-grid">
+      <div class="feature-card animate-in">
+        <div class="feature-icon purple"><i class="fas fa-headset"></i></div>
+        <h3 data-fr="Support Client 24/7" data-en="24/7 Customer Support">Support Client 24/7</h3>
+        <p data-fr="Notre équipe d'experts vous accompagne pour optimiser votre expérience de streaming." data-en="Our expert team helps you optimize your streaming experience.">Notre équipe d'experts vous accompagne pour optimiser votre expérience de streaming.</p>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon green"><i class="fas fa-bolt"></i></div>
+        <h3 data-fr="Performance Supérieure" data-en="Superior Performance">Performance Supérieure</h3>
+        <p data-fr="Profitez d'une qualité de service inégalée grâce à nos serveurs de premier ordre." data-en="Enjoy unmatched service quality with our premium servers.">Profitez d'une qualité de service inégalée grâce à nos serveurs de premier ordre.</p>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon blue"><i class="fas fa-shield-halved"></i></div>
+        <h3 data-fr="Anti-Freeze" data-en="Anti-Freeze">Anti-Freeze</h3>
+        <p data-fr="Technologie anti-gel pour un streaming sans interruption, même pendant le sport." data-en="Anti-freeze technology for uninterrupted streaming, even during sports.">Technologie anti-gel pour un streaming sans interruption, même pendant le sport.</p>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon pink"><i class="fas fa-tv"></i></div>
+        <h3 data-fr="20,000+ Chaînes" data-en="20,000+ Channels">20,000+ Chaînes</h3>
+        <p data-fr="Accédez à des milliers de chaînes du monde entier en direct, sport, cinéma, actualités." data-en="Access thousands of live channels worldwide — sports, cinema, news.">Accédez à des milliers de chaînes du monde entier en direct, sport, cinéma, actualités.</p>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon orange"><i class="fas fa-film"></i></div>
+        <h3 data-fr="80,000+ VOD" data-en="80,000+ VOD">80,000+ VOD</h3>
+        <p data-fr="Films et séries à la demande, mis à jour régulièrement avec les dernières sorties." data-en="On-demand movies & series, regularly updated with latest releases.">Films et séries à la demande, mis à jour régulièrement avec les dernières sorties.</p>
+      </div>
+      <div class="feature-card animate-in">
+        <div class="feature-icon red"><i class="fas fa-mobile-screen"></i></div>
+        <h3 data-fr="Multi-Appareils" data-en="Multi-Devices">Multi-Appareils</h3>
+        <p data-fr="Compatible Smart TV, Android, iOS, MAG, Firestick, PC, Mac et toutes les apps IPTV." data-en="Compatible with Smart TV, Android, iOS, MAG, Firestick, PC, Mac and all IPTV apps.">Compatible Smart TV, Android, iOS, MAG, Firestick, PC, Mac et toutes les apps IPTV.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STEPS ===== -->
+<section class="section steps" id="comment-utiliser">
+  <div class="container">
+    <h2 class="section-title text-gradient-blue" data-fr="Comment Utiliser" data-en="How To Use">Comment Utiliser</h2>
+    <p class="section-subtitle" data-fr="Commencez à regarder en 4 étapes simples" data-en="Start watching in 4 simple steps">Commencez à regarder en 4 étapes simples</p>
+    <div class="steps-grid">
+      <div class="step-card animate-in">
+        <div class="step-number">1</div>
+        <h3 data-fr="Choisissez un forfait" data-en="Choose a plan">Choisissez un forfait</h3>
+        <p data-fr="Sélectionnez l'abonnement qui correspond à vos besoins" data-en="Select the subscription that fits your needs">Sélectionnez l'abonnement qui correspond à vos besoins</p>
+      </div>
+      <div class="step-card animate-in">
+        <div class="step-number">2</div>
+        <h3 data-fr="Paiement sécurisé" data-en="Secure payment">Paiement sécurisé</h3>
+        <p data-fr="Payez par PayPal, carte bancaire ou crypto" data-en="Pay by PayPal, credit card or crypto">Payez par PayPal, carte bancaire ou crypto</p>
+      </div>
+      <div class="step-card animate-in">
+        <div class="step-number">3</div>
+        <h3 data-fr="Recevez vos accès" data-en="Get your access">Recevez vos accès</h3>
+        <p data-fr="Vos identifiants arrivent par email en quelques minutes" data-en="Your credentials arrive by email in minutes">Vos identifiants arrivent par email en quelques minutes</p>
+      </div>
+      <div class="step-card animate-in">
+        <div class="step-number">4</div>
+        <h3 data-fr="Profitez !" data-en="Enjoy!">Profitez !</h3>
+        <p data-fr="Installez l'app et commencez à regarder" data-en="Install the app and start watching">Installez l'app et commencez à regarder</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="section pricing" id="abonnement">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Achetez Abonnement IPTV" data-en="Buy IPTV Subscription">Achetez Abonnement IPTV</h2>
+    <p class="section-subtitle" data-fr="Choisissez le forfait qui vous convient le mieux" data-en="Choose the plan that suits you best">Choisissez le forfait qui vous convient le mieux</p>
+    <div class="pricing-grid">
+      <div class="pricing-card animate-in">
+        <h3 data-fr="1 Mois" data-en="1 Month">1 Mois</h3>
+        <div class="pricing-amount"><span>€</span>9</div>
+        <div class="pricing-period" data-fr="/mois" data-en="/month">/mois</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 20,000+ chaînes</li>
+          <li><span class="check">✓</span> 80,000+ VOD</li>
+          <li><span class="check">✓</span> 4K / FHD / HD</li>
+          <li><span class="check">✓</span> 1 connexion</li>
+          <li><span class="check">✓</span> Support 24/7</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" style="width:100%" data-fr="Commander" data-en="Order">Commander</a>
+      </div>
+      <div class="pricing-card popular animate-in">
+        <span class="pricing-badge" data-fr="⭐ Populaire" data-en="⭐ Popular">⭐ Populaire</span>
+        <h3 data-fr="12 Mois" data-en="12 Months">12 Mois</h3>
+        <div class="pricing-amount"><span>€</span>55</div>
+        <div class="pricing-period" data-fr="/an — Économisez 53€ !" data-en="/year — Save 53€!">/an — Économisez 53€ !</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 20,000+ chaînes</li>
+          <li><span class="check">✓</span> 80,000+ VOD</li>
+          <li><span class="check">✓</span> 4K / FHD / HD</li>
+          <li><span class="check">✓</span> 1 connexion</li>
+          <li><span class="check">✓</span> Support 24/7</li>
+          <li><span class="check">✓</span> Anti-freeze</li>
+        </ul>
+        <a href="#contact" class="btn btn-accent" style="width:100%" data-fr="Commander Maintenant" data-en="Order Now">Commander Maintenant</a>
+      </div>
+      <div class="pricing-card animate-in">
+        <h3 data-fr="3 Mois" data-en="3 Months">3 Mois</h3>
+        <div class="pricing-amount"><span>€</span>25</div>
+        <div class="pricing-period" data-fr="/3 mois" data-en="/3 months">/3 mois</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 20,000+ chaînes</li>
+          <li><span class="check">✓</span> 80,000+ VOD</li>
+          <li><span class="check">✓</span> 4K / FHD / HD</li>
+          <li><span class="check">✓</span> 1 connexion</li>
+          <li><span class="check">✓</span> Support 24/7</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline" style="width:100%" data-fr="Commander" data-en="Order">Commander</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOWNLOADS ===== -->
+<section class="section downloads" id="telechargements">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Téléchargements" data-en="Downloads">Téléchargements</h2>
+    <p class="section-subtitle" data-fr="Téléchargez l'application pour votre appareil" data-en="Download the app for your device">Téléchargez l'application pour votre appareil</p>
+    <div class="downloads-grid">
+      <div class="download-card animate-in">
+        <div class="download-icon" style="background:linear-gradient(135deg,rgba(6,214,160,0.2),rgba(6,214,160,0.05));color:var(--accent)"><i class="fab fa-android"></i></div>
+        <h3>Android</h3>
+        <div class="version">Smarters Player v3.0</div>
+        <a href="#" class="btn btn-accent"><i class="fas fa-download"></i> APK</a>
+      </div>
+      <div class="download-card animate-in">
+        <div class="download-icon" style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(59,130,246,0.05));color:var(--blue)"><i class="fab fa-apple"></i></div>
+        <h3>iOS</h3>
+        <div class="version">Smarters Player v3.0</div>
+        <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> App Store</a>
+      </div>
+      <div class="download-card animate-in">
+        <div class="download-icon" style="background:linear-gradient(135deg,rgba(245,158,11,0.2),rgba(245,158,11,0.05));color:var(--orange)"><i class="fas fa-tv"></i></div>
+        <h3>Smart TV</h3>
+        <div class="version">Smarters Player v3.0</div>
+        <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> Tizen / webOS</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TUTORIALS ===== -->
+<section class="section tutorials" id="tutoriels">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Tutoriels d'Installation" data-en="Installation Tutorials">Tutoriels d'Installation</h2>
+    <p class="section-subtitle" data-fr="Guide étape par étape pour configurer votre IPTV sur tous vos appareils" data-en="Step-by-step guide to set up your IPTV on all devices">Guide étape par étape pour configurer votre IPTV sur tous vos appareils</p>
+
+    <div class="tutorial-tabs">
+      <button class="tutorial-tab active" onclick="switchTutorial('xtream', this)"><i class="fas fa-server"></i> <span data-fr="Xtream Codes" data-en="Xtream Codes">Xtream Codes</span></button>
+      <button class="tutorial-tab" onclick="switchTutorial('m3u', this)"><i class="fas fa-list"></i> <span data-fr="M3U Link" data-en="M3U Link">M3U Link</span></button>
+      <button class="tutorial-tab" onclick="switchTutorial('mag', this)"><i class="fas fa-microchip"></i> <span data-fr="MAG Device" data-en="MAG Device">MAG Device</span></button>
+      <button class="tutorial-tab" onclick="switchTutorial('smarters', this)"><i class="fas fa-mobile-alt"></i> <span data-fr="Smarters Player" data-en="Smarters Player">Smarters Player</span></button>
+    </div>
+
+    <!-- Xtream Codes Tutorial -->
+    <div class="tutorial-content active" id="tutorial-xtream">
+      <div class="tutorial-grid">
+        <div class="tutorial-steps">
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">1</div>
+            <div>
+              <h4 data-fr="Recevez vos identifiants Xtream" data-en="Get your Xtream credentials">Recevez vos identifiants Xtream</h4>
+              <p data-fr="Après votre commande, vous recevrez par email : le serveur, le nom d'utilisateur et le mot de passe Xtream Codes." data-en="After ordering, you'll receive by email: server URL, username and Xtream Codes password.">Après votre commande, vous recevrez par email : le serveur, le nom d'utilisateur et le mot de passe Xtream Codes.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">2</div>
+            <div>
+              <h4 data-fr="Ouvrez votre application IPTV" data-en="Open your IPTV app">Ouvrez votre application IPTV</h4>
+              <p data-fr="Lancez Smarters Player, TiviMate, IPTV Smarters ou toute autre app compatible Xtream Codes." data-en="Launch Smarters Player, TiviMate, IPTV Smarters or any Xtream Codes compatible app.">Lancez Smarters Player, TiviMate, IPTV Smarters ou toute autre app compatible Xtream Codes.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">3</div>
+            <div>
+              <h4 data-fr="Sélectionnez Xtream Codes API" data-en="Select Xtream Codes API">Sélectionnez Xtream Codes API</h4>
+              <p data-fr="Choisissez 'Xtream Codes API' ou 'Login with Xtream Codes' dans les options de connexion de l'application." data-en="Choose 'Xtream Codes API' or 'Login with Xtream Codes' in the app's connection options.">Choisissez 'Xtream Codes API' ou 'Login with Xtream Codes' dans les options de connexion de l'application.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">4</div>
+            <div>
+              <h4 data-fr="Entrez vos identifiants" data-en="Enter your credentials">Entrez vos identifiants</h4>
+              <p data-fr="Remplissez les champs : Server URL, Username et Password avec les informations reçues par email." data-en="Fill in the fields: Server URL, Username and Password with the info received by email.">Remplissez les champs : Server URL, Username et Password avec les informations reçues par email.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">5</div>
+            <div>
+              <h4 data-fr="Profitez de vos chaînes !" data-en="Enjoy your channels!">Profitez de vos chaînes !</h4>
+              <p data-fr="Cliquez sur Connect/Load. Vos chaînes, VOD et séries apparaîtront automatiquement." data-en="Click Connect/Load. Your channels, VOD and series will appear automatically.">Cliquez sur Connect/Load. Vos chaînes, VOD et séries apparaîtront automatiquement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tutorial-visual">
+          <h4><span class="icon"><i class="fas fa-code"></i></span> <span data-fr="Format Xtream Codes" data-en="Xtream Codes Format">Format Xtream Codes</span></h4>
+          <div class="tutorial-code">
+            <span class="label" data-fr="Serveur" data-en="Server">Serveur</span>
+            http://your-server.com:port<br><br>
+            <span class="label" data-fr="Nom d'utilisateur" data-en="Username">Nom d'utilisateur</span>
+            your_username<br><br>
+            <span class="label" data-fr="Mot de passe" data-en="Password">Mot de passe</span>
+            your_password
+          </div>
+          <div class="tutorial-note">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <span data-fr="Compatible avec : Smarters Player, TiviMate, IPTV Smarters, Perfect Player, GSE Smart IPTV, et plus." data-en="Compatible with: Smarters Player, TiviMate, IPTV Smarters, Perfect Player, GSE Smart IPTV, and more.">Compatible avec : Smarters Player, TiviMate, IPTV Smarters, Perfect Player, GSE Smart IPTV, et plus.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- M3U Tutorial -->
+    <div class="tutorial-content" id="tutorial-m3u">
+      <div class="tutorial-grid">
+        <div class="tutorial-steps">
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">1</div>
+            <div>
+              <h4 data-fr="Recevez votre lien M3U" data-en="Get your M3U link">Recevez votre lien M3U</h4>
+              <p data-fr="Après votre commande, vous recevrez un lien M3U unique par email. Ce lien contient toutes vos chaînes." data-en="After ordering, you'll receive a unique M3U link by email. This link contains all your channels.">Après votre commande, vous recevrez un lien M3U unique par email. Ce lien contient toutes vos chaînes.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">2</div>
+            <div>
+              <h4 data-fr="Copiez le lien M3U" data-en="Copy the M3U link">Copiez le lien M3U</h4>
+              <p data-fr="Copiez le lien complet depuis votre email. Il commence par http:// et se termine par .m3u ou .m3u8." data-en="Copy the full link from your email. It starts with http:// and ends with .m3u or .m3u8.">Copiez le lien complet depuis votre email. Il commence par http:// et se termine par .m3u ou .m3u8.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">3</div>
+            <div>
+              <h4 data-fr="Ouvrez votre app IPTV" data-en="Open your IPTV app">Ouvrez votre app IPTV</h4>
+              <p data-fr="Lancez votre application IPTV (Smarters Player, VLC, TiviMate, etc.) et cherchez l'option 'Ajouter une playlist' ou 'Add M3U URL'." data-en="Launch your IPTV app (Smarters Player, VLC, TiviMate, etc.) and look for 'Add playlist' or 'Add M3U URL'.">Lancez votre application IPTV (Smarters Player, VLC, TiviMate, etc.) et cherchez l'option 'Ajouter une playlist' ou 'Add M3U URL'.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">4</div>
+            <div>
+              <h4 data-fr="Collez le lien M3U" data-en="Paste the M3U link">Collez le lien M3U</h4>
+              <p data-fr="Collez votre lien M3U dans le champ URL/Playlist. Donnez un nom à votre playlist et validez." data-en="Paste your M3U link in the URL/Playlist field. Name your playlist and confirm.">Collez votre lien M3U dans le champ URL/Playlist. Donnez un nom à votre playlist et validez.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">5</div>
+            <div>
+              <h4 data-fr="Chargez et regardez" data-en="Load and watch">Chargez et regardez</h4>
+              <p data-fr="L'application va charger toutes les chaînes. Cela peut prendre 30 secondes à 2 minutes selon votre connexion." data-en="The app will load all channels. This may take 30 seconds to 2 minutes depending on your connection.">L'application va charger toutes les chaînes. Cela peut prendre 30 secondes à 2 minutes selon votre connexion.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tutorial-visual">
+          <h4><span class="icon"><i class="fas fa-link"></i></span> <span data-fr="Format du lien M3U" data-en="M3U Link Format">Format du lien M3U</span></h4>
+          <div class="tutorial-code">
+            <span class="label" data-fr="Lien M3U complet" data-en="Full M3U link">Lien M3U complet</span>
+            http://your-server.com:port/get.php?username=YOUR_USER&password=YOUR_PASS&type=m3u_plus&output=mpegts
+          </div>
+          <div class="tutorial-note">
+            <span class="icon"><i class="fas fa-lightbulb"></i></span>
+            <span data-fr="Astuce : Sur VLC, utilisez Média > Ouvrir un flux réseau et collez le lien M3U pour un test rapide." data-en="Tip: On VLC, use Media > Open Network Stream and paste the M3U link for a quick test.">Astuce : Sur VLC, utilisez Média > Ouvrir un flux réseau et collez le lien M3U pour un test rapide.</span>
+          </div>
+          <div class="tutorial-note" style="margin-top:12px">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <span data-fr="Compatible avec : VLC, Smarters Player, TiviMate, Perfect Player, GSE Smart IPTV, Kodi, et plus." data-en="Compatible with: VLC, Smarters Player, TiviMate, Perfect Player, GSE Smart IPTV, Kodi, and more.">Compatible avec : VLC, Smarters Player, TiviMate, Perfect Player, GSE Smart IPTV, Kodi, et plus.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAG Tutorial -->
+    <div class="tutorial-content" id="tutorial-mag">
+      <div class="tutorial-grid">
+        <div class="tutorial-steps">
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">1</div>
+            <div>
+              <h4 data-fr="Recevez votre adresse MAC" data-en="Get your MAC address">Recevez votre adresse MAC</h4>
+              <p data-fr="Votre abonnement MAG est lié à l'adresse MAC de votre appareil. Vous la trouverez dans les paramètres réseau de votre MAG box." data-en="Your MAG subscription is linked to your device's MAC address. Find it in your MAG box network settings.">Votre abonnement MAG est lié à l'adresse MAC de votre appareil. Vous la trouverez dans les paramètres réseau de votre MAG box.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">2</div>
+            <div>
+              <h4 data-fr="Envoyez votre MAC" data-en="Send your MAC">Envoyez votre MAC</h4>
+              <p data-fr="Envoyez-nous l'adresse MAC de votre MAG box (format: 00:1A:79:XX:XX:XX) par email ou WhatsApp après votre commande." data-en="Send us your MAG box MAC address (format: 00:1A:79:XX:XX:XX) by email or WhatsApp after ordering.">Envoyez-nous l'adresse MAC de votre MAG box (format: 00:1A:79:XX:XX:XX) par email ou WhatsApp après votre commande.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">3</div>
+            <div>
+              <h4 data-fr="Activation du portail" data-en="Portal activation">Activation du portail</h4>
+              <p data-fr="Nous activons votre portail IPTV sur votre MAC. Vous recevrez l'URL du portail par email dans les 5-15 minutes." data-en="We activate your IPTV portal on your MAC. You'll receive the portal URL by email within 5-15 minutes.">Nous activons votre portail IPTV sur votre MAC. Vous recevrez l'URL du portail par email dans les 5-15 minutes.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">4</div>
+            <div>
+              <h4 data-fr="Configurez votre MAG box" data-en="Set up your MAG box">Configurez votre MAG box</h4>
+              <p data-fr="Sur votre MAG box : Allez dans Système > Paramètres > Serveurs de portail. Entrez l'URL du portail reçu." data-en="On your MAG box: Go to System > Settings > Portal Servers. Enter the portal URL you received.">Sur votre MAG box : Allez dans Système > Paramètres > Serveurs de portail. Entrez l'URL du portail reçu.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">5</div>
+            <div>
+              <h4 data-fr="Redémarrez et profitez" data-en="Restart and enjoy">Redémarrez et profitez</h4>
+              <p data-fr="Redémarrez votre MAG box. Le portail va se charger automatiquement avec toutes vos chaînes et VOD." data-en="Restart your MAG box. The portal will load automatically with all your channels and VOD.">Redémarrez votre MAG box. Le portail va se charger automatiquement avec toutes vos chaînes et VOD.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tutorial-visual">
+          <h4><span class="icon"><i class="fas fa-microchip"></i></span> <span data-fr="Configuration MAG" data-en="MAG Configuration">Configuration MAG</span></h4>
+          <div class="tutorial-code">
+            <span class="label" data-fr="Adresse MAC" data-en="MAC Address">Adresse MAC</span>
+            00:1A:79:XX:XX:XX<br><br>
+            <span class="label" data-fr="URL du portail" data-en="Portal URL">URL du portail</span>
+            http://your-portal.com/c/<br><br>
+            <span class="label" data-fr="Identifiant" data-en="Login">Identifiant</span>
+            (généré automatiquement)
+          </div>
+          <div class="tutorial-note">
+            <span class="icon"><i class="fas fa-info-circle"></i></span>
+            <span data-fr="Compatible avec : MAG 250, MAG 254, MAG 256, MAG 257, MAG 322, MAG 324, MAG 420, MAG 424, MAG 520, MAG 524, et tous les appareils Infomir." data-en="Compatible with: MAG 250, MAG 254, MAG 256, MAG 257, MAG 322, MAG 324, MAG 420, MAG 424, MAG 520, MAG 524, and all Infomir devices.">Compatible avec : MAG 250, MAG 254, MAG 256, MAG 257, MAG 322, MAG 324, MAG 420, MAG 424, MAG 520, MAG 524, et tous les appareils Infomir.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smarters Player Tutorial -->
+    <div class="tutorial-content" id="tutorial-smarters">
+      <div class="tutorial-grid">
+        <div class="tutorial-steps">
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">1</div>
+            <div>
+              <h4 data-fr="Téléchargez Smarters Player" data-en="Download Smarters Player">Téléchargez Smarters Player</h4>
+              <p data-fr="Téléchargez IPTV Smarters Player depuis le Google Play Store, App Store ou notre section téléchargements." data-en="Download IPTV Smarters Player from Google Play Store, App Store or our downloads section.">Téléchargez IPTV Smarters Player depuis le Google Play Store, App Store ou notre section téléchargements.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">2</div>
+            <div>
+              <h4 data-fr="Ouvrez l'application" data-en="Open the app">Ouvrez l'application</h4>
+              <p data-fr="Lancez IPTV Smarters Player. Acceptez les conditions d'utilisation et choisissez 'Login with Xtream Codes API' ou 'Login with M3U URL'." data-en="Launch IPTV Smarters Player. Accept the terms and choose 'Login with Xtream Codes API' or 'Login with M3U URL'.">Lancez IPTV Smarters Player. Acceptez les conditions d'utilisation et choisissez 'Login with Xtream Codes API' ou 'Login with M3U URL'.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">3</div>
+            <div>
+              <h4 data-fr="Entrez vos identifiants" data-en="Enter your credentials">Entrez vos identifiants</h4>
+              <p data-fr="Pour Xtream : entrez Server URL, Username et Password. Pour M3U : collez votre lien M3U complet." data-en="For Xtream: enter Server URL, Username and Password. For M3U: paste your full M3U link.">Pour Xtream : entrez Server URL, Username et Password. Pour M3U : collez votre lien M3U complet.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">4</div>
+            <div>
+              <h4 data-fr="Sélectionnez le profil" data-en="Select profile">Sélectionnez le profil</h4>
+              <p data-fr="Choisissez un nom de profil (ex: StreamVision) et cliquez sur 'Add User'. L'application va charger vos chaînes." data-en="Choose a profile name (e.g: StreamVision) and click 'Add User'. The app will load your channels.">Choisissez un nom de profil (ex: StreamVision) et cliquez sur 'Add User'. L'application va charger vos chaînes.</p>
+            </div>
+          </div>
+          <div class="tutorial-step">
+            <div class="tutorial-step-num">5</div>
+            <div>
+              <h4 data-fr="Naviguez et regardez" data-en="Browse and watch">Naviguez et regardez</h4>
+              <p data-fr="Explorez les catégories : Live TV, Movies, Series. Utilisez la recherche pour trouver vos chaînes préférées." data-en="Browse categories: Live TV, Movies, Series. Use search to find your favorite channels.">Explorez les catégories : Live TV, Movies, Series. Utilisez la recherche pour trouver vos chaînes préférées.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tutorial-visual">
+          <h4><span class="icon"><i class="fas fa-mobile-alt"></i></span> <span data-fr="Smarters Player Setup" data-en="Smarters Player Setup">Smarters Player Setup</span></h4>
+          <div class="tutorial-code">
+            <span class="label" data-fr="Option 1 — Xtream" data-en="Option 1 — Xtream">Option 1 — Xtream</span>
+            Login: your_username<br>
+            Password: your_password<br>
+            URL: http://server.com:port<br><br>
+            <span class="label" data-fr="Option 2 — M3U" data-en="Option 2 — M3U">Option 2 — M3U</span>
+            M3U URL: http://server.com/get.php?...
+          </div>
+          <div class="tutorial-note">
+            <span class="icon"><i class="fas fa-lightbulb"></i></span>
+            <span data-fr="Astuce : Smarters Player permet d'ajouter plusieurs profils. Vous pouvez avoir plusieurs abonnements sur la même app." data-en="Tip: Smarters Player allows multiple profiles. You can have multiple subscriptions on the same app.">Astuce : Smarters Player permet d'ajouter plusieurs profils. Vous pouvez avoir plusieurs abonnements sur la même app.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Avis Clients" data-en="Customer Reviews">Avis Clients</h2>
+    <p class="section-subtitle" data-fr="Ce que nos clients disent de nous" data-en="What our customers say about us">Ce que nos clients disent de nous</p>
+    <div class="testimonials-grid">
+      <div class="testimonial-card animate-in">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Service excellent ! Les chaînes sont stables et la qualité 4K est impressionnante. Je recommande vivement."</p>
+        <div class="testimonial-author">
+          <div class="avatar">M</div>
+          <div><div class="name">Mohammed A.</div><div class="role" data-fr="Client depuis 2023" data-en="Customer since 2023">Client depuis 2023</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-in">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Le meilleur service IPTV que j'ai testé. Support réactif et VOD toujours à jour. Parfait !"</p>
+        <div class="testimonial-author">
+          <div class="avatar">S</div>
+          <div><div class="name">Sophie L.</div><div class="role" data-fr="Client depuis 2024" data-en="Customer since 2024">Client depuis 2024</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-in">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Installation facile, ça marche sur tous mes appareils. Le rapport qualité-prix est imbattable à 55€/an."</p>
+        <div class="testimonial-author">
+          <div class="avatar">K</div>
+          <div><div class="name">Karim B.</div><div class="role" data-fr="Client depuis 2022" data-en="Customer since 2022">Client depuis 2022</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section class="section blog">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Blog & Guides IPTV" data-en="Blog & IPTV Guides">Blog & Guides IPTV</h2>
+    <p class="section-subtitle" data-fr="Conseils, tutoriels et actualités pour tirer le meilleur de votre IPTV" data-en="Tips, tutorials and news to get the most out of your IPTV">Conseils, tutoriels et actualités pour tirer le meilleur de votre IPTV</p>
+    <div class="blog-grid">
+      <div class="blog-card animate-in">
+        <div class="blog-card-img"><div class="placeholder" style="background:linear-gradient(135deg,#7c3aed,#1e1b4b);color:rgba(255,255,255,0.3)"><i class="fas fa-fire"></i></div></div>
+        <div class="blog-card-body">
+          <div class="date">15 Mai 2026</div>
+          <h3 data-fr="Comment installer IPTV sur Firestick en 2026" data-en="How to Install IPTV on Firestick in 2026">Comment installer IPTV sur Firestick en 2026</h3>
+          <p data-fr="Guide complet : téléchargez Downloader, installez Smarters Player, et configurez votre abonnement IPTV en 5 minutes. Compatible Firestick 4K, Lite et Cube." data-en="Complete guide: download Downloader, install Smarters Player, and configure your IPTV subscription in 5 minutes. Compatible with Firestick 4K, Lite and Cube.">Guide complet : téléchargez Downloader, installez Smarters Player, et configurez votre abonnement IPTV en 5 minutes. Compatible Firestick 4K, Lite et Cube.</p>
+          <a href="#tutoriels" class="read-more" data-fr="Lire la suite →" data-en="Read more →">Lire la suite →</a>
+        </div>
+      </div>
+      <div class="blog-card animate-in">
+        <div class="blog-card-img"><div class="placeholder" style="background:linear-gradient(135deg,#ec4899,#831843);color:rgba(255,255,255,0.3)"><i class="fas fa-mobile-alt"></i></div></div>
+        <div class="blog-card-body">
+          <div class="date">8 Mai 2026</div>
+          <h3 data-fr="Top 10 meilleures applications IPTV en 2026" data-en="Top 10 Best IPTV Apps in 2026">Top 10 meilleures applications IPTV en 2026</h3>
+          <p data-fr="Comparatif détaillé : Smarters Player vs TiviMate vs Perfect Player. Guide pour choisir la meilleure app selon votre appareil et vos besoins." data-en="Detailed comparison: Smarters Player vs TiviMate vs Perfect Player. Guide to choose the best app for your device and needs.">Comparatif détaillé : Smarters Player vs TiviMate vs Perfect Player. Guide pour choisir la meilleure app selon votre appareil et vos besoins.</p>
+          <a href="#tutoriels" class="read-more" data-fr="Lire la suite →" data-en="Read more →">Lire la suite →</a>
+        </div>
+      </div>
+      <div class="blog-card animate-in">
+        <div class="blog-card-img"><div class="placeholder" style="background:linear-gradient(135deg,#06d6a0,#065f46);color:rgba(255,255,255,0.3)"><i class="fas fa-shield-halved"></i></div></div>
+        <div class="blog-card-body">
+          <div class="date">1 Mai 2026</div>
+          <h3 data-fr="Sécuriser votre connexion IPTV avec un VPN" data-en="Secure Your IPTV Connection with a VPN">Sécuriser votre connexion IPTV avec un VPN</h3>
+          <p data-fr="Pourquoi utiliser un VPN avec votre IPTV ? Guide complet : choix du VPN, configuration routeur, et streaming sécurisé sans ralentissement." data-en="Why use a VPN with your IPTV? Complete guide: VPN selection, router setup, and secure, lag-free streaming.">Pourquoi utiliser un VPN avec votre IPTV ? Guide complet : choix du VPN, configuration routeur, et streaming sécurisé sans ralentissement.</p>
+          <a href="#tutoriels" class="read-more" data-fr="Lire la suite →" data-en="Read more →">Lire la suite →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="FAQs" data-en="FAQs">FAQs</h2>
+    <p class="section-subtitle" data-fr="Questions fréquemment posées" data-en="Frequently asked questions">Questions fréquemment posées</p>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Qu'est-ce que l'IPTV ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>L'IPTV (Internet Protocol Television) est un service de télévision diffusé via Internet. Il vous permet de regarder des milliers de chaînes en direct, des films et des séries à la demande, sur tous vos appareils.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Quels appareils sont compatibles ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Notre service fonctionne sur Smart TV (Samsung, LG), Android, iOS, Amazon Firestick, MAG, PC, Mac, et toutes les applications IPTV populaires comme Smarters Player, TiviMate, et IPTV Smarters.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Combien de temps pour activer ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>L'activation est instantanée ! Vous recevrez vos identifiants par email dans les 5 à 15 minutes après votre paiement.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Quels modes de paiement acceptez-vous ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Nous acceptons PayPal, les cartes bancaires (Visa, Mastercard), les virements bancaires et les cryptomonnaies (Bitcoin, USDT).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Puis-je utiliser plusieurs appareils ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Chaque abonnement inclut 1 connexion. Vous pouvez ajouter des connexions supplémentaires moyennant un petit supplément.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Y a-t-il une garantie ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Oui, nous offrons une garantie de remboursement de 7 jours si vous n'êtes pas satisfait de notre service.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Comment contacter le support ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Notre support est disponible 24/7 via WhatsApp, Discord ou le formulaire de contact ci-dessous.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)"><span>Quelle vitesse Internet faut-il ?</span><span class="icon">+</span></button>
+        <div class="faq-answer"><p>Nous recommandons une connexion d'au moins 10 Mbps pour le HD et 25 Mbps pour le 4K.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <h2 class="section-title text-gradient" data-fr="Contactez-nous" data-en="Contact Us">Contactez-nous</h2>
+    <p class="section-subtitle" data-fr="Notre équipe est là pour répondre à vos questions" data-en="Our team is here to answer your questions">Notre équipe est là pour répondre à vos questions</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 data-fr="Assistance Rapide" data-en="Quick Assistance">Assistance Rapide</h3>
+        <p data-fr="Remplissez le formulaire et notre équipe vous répondra dans les plus brefs délais." data-en="Fill out the form and our team will respond as soon as possible.">Remplissez le formulaire et notre équipe vous répondra dans les plus brefs délais.</p>
+        <div class="contact-methods">
+          <div class="contact-method"><div class="icon"><i class="fab fa-whatsapp"></i></div><div class="text"><strong>WhatsApp</strong>+212 630 463 227</div></div>
+          <div class="contact-method"><div class="icon"><i class="fab fa-discord"></i></div><div class="text"><strong>Discord</strong>discord.gg/streamvision</div></div>
+          <div class="contact-method"><div class="icon"><i class="fas fa-envelope"></i></div><div class="text"><strong>Email</strong>support@streamvision.tv</div></div>
+          <div class="contact-method"><div class="icon"><i class="fas fa-clock"></i></div><div class="text"><strong>Disponibilité</strong>24/7 — Réponse rapide garantie</div></div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label>Prénom</label><input type="text" name="prenom" placeholder="Entrez votre prénom" required></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="email@exemple.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Téléphone *</label><input type="tel" name="phone" placeholder="+212 600 000 000" required></div>
+          <div class="form-group"><label>Type d'appareil</label><select name="device"><option value="">Sélectionnez...</option><option value="android">Android</option><option value="ios">iOS</option><option value="smarttv">Smart TV</option><option value="firestick">Firestick</option><option value="mag">MAG</option><option value="pc">PC / Mac</option><option value="autre">Autre</option></select></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Application</label><input type="text" name="app" placeholder="Smarters Player, TiviMate..."></div>
+          <div class="form-group"><label>MAC Address</label><input type="text" name="mac" placeholder="00:1A:2B:3C:4D:5E"></div>
+        </div>
+        <div class="form-group"><label>Format préféré</label><div class="form-checkboxes"><label><input type="checkbox" name="format" value="m3u"> M3U</label><label><input type="checkbox" name="format" value="xtream"> Xtream Codes</label><label><input type="checkbox" name="format" value="mag"> MAG</label></div></div>
+        <div class="form-group"><label>Votre message *</label><textarea name="message" placeholder="Décrivez votre demande..." required></textarea></div>
+        <button type="submit" class="form-submit">Soumettez vos informations maintenant</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container">
+    <h2 data-fr="Prêt à commencer ?" data-en="Ready to start?">Prêt à commencer ?</h2>
+    <p data-fr="Rejoignez des milliers de clients satisfaits et profitez du meilleur de l'IPTV dès aujourd'hui." data-en="Join thousands of satisfied customers and enjoy the best of IPTV today.">Rejoignez des milliers de clients satisfaits et profitez du meilleur de l'IPTV dès aujourd'hui.</p>
+    <div class="cta-buttons">
+      <a href="#abonnement" class="btn btn-accent btn-lg" data-fr="Commander — 55€/an" data-en="Order — 55€/year">Commander — 55€/an</a>
+      <a href="https://wa.me/212630463227" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3);color:#fff">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESELLER ===== -->
+<section class="section reseller" id="revendeur">
+  <div class="reseller-inner">
+    <h2 class="section-title text-gradient" data-fr="Devenir Revendeur" data-en="Become a Reseller">Devenir Revendeur</h2>
+    <p class="section-subtitle" data-fr="Rejoignez notre programme revendeur et gagnez des revenus récurrents." data-en="Join our reseller program and earn recurring revenue.">Rejoignez notre programme revendeur et gagnez des revenus récurrents.</p>
+    <div class="reseller-stats">
+      <div class="reseller-stat"><div class="num">60%</div><div class="lbl" data-fr="Marge" data-en="Margin">Marge</div></div>
+      <div class="reseller-stat"><div class="num">0€</div><div class="lbl" data-fr="Frais" data-en="Fees">Frais</div></div>
+      <div class="reseller-stat"><div class="num">API</div><div class="lbl" data-fr="Panel" data-en="Panel">Panel</div></div>
+    </div>
+    <a href="#contact" class="btn btn-primary btn-lg" data-fr="Devenir Revendeur" data-en="Become a Reseller">Devenir Revendeur</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><div class="logo-icon"><i class="fas fa-play"></i></div>StreamVision IPTV</div>
+        <p data-fr="Fournisseur IPTV premium offrant des solutions de streaming dans le monde entier." data-en="Premium IPTV provider offering streaming solutions worldwide.">Fournisseur IPTV premium offrant des solutions de streaming dans le monde entier.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/212630463227"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://discord.gg/"><i class="fab fa-discord"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#abonnement">Abonnement</a></li>
+          <li><a href="#tutoriels">Tutoriels</a></li>
+          <li><a href="#telechargements">Téléchargements</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#abonnement">IPTV Premium</a></li>
+          <li><a href="#abonnement">VOD</a></li>
+          <li><a href="#tutoriels">Tutoriels</a></li>
+          <li><a href="#revendeur">Revendeur</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul>
+          <li><a href="#">Conditions d'utilisation</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Politique de remboursement</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 StreamVision IPTV. Tous droits réservés</span>
+      <span>Qualité • Performance • Confiance</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/video.js@8.10.0/dist/video.min.js"></script>
+</body>
+</html>
