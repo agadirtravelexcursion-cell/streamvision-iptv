@@ -81,9 +81,34 @@ const PAGE_SIZE = 50;
 const XTREAM = { host: 'http://smarters2026.sbs:8080', user: 'lxkbttgxyw', pass: '23mpvq5l7d' };
 
 // ===== FETCH =====
+// Priority: local proxy > direct > CORS proxies
 async function xtreamFetch(endpoint) {
-  try { const r = await fetch(`${XTREAM.host}${endpoint}`, { signal: AbortSignal.timeout(15000) }); if (r.ok) return await r.json(); } catch(e) {}
-  try { const r = await fetch(`https://corsproxy.io/?${encodeURIComponent(XTREAM.host + endpoint)}`, { signal: AbortSignal.timeout(20000) }); if (r.ok) return await r.json(); } catch(e) {}
+  const fullUrl = `/player_api.php?username=${XTREAM.user}&password=${XTREAM.pass}&action=${endpoint.split('action=')[1]}`;
+  
+  // 1. Try local proxy (works when running server.py)
+  try {
+    const r = await fetch(`/api/xtream?username=${XTREAM.user}&password=${XTREAM.pass}&action=${endpoint.split('action=')[1]}`, { signal: AbortSignal.timeout(15000) });
+    if (r.ok) return await r.json();
+  } catch(e) {}
+
+  // 2. Try direct (works on localhost only)
+  try {
+    const r = await fetch(`${XTREAM.host}${endpoint}`, { signal: AbortSignal.timeout(10000) });
+    if (r.ok) return await r.json();
+  } catch(e) {}
+
+  // 3. Try CORS proxies
+  const proxies = [
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(XTREAM.host + endpoint)}`,
+    `https://corsproxy.io/?${encodeURIComponent(XTREAM.host + endpoint)}`,
+  ];
+  for (const proxy of proxies) {
+    try {
+      const r = await fetch(proxy, { signal: AbortSignal.timeout(20000) });
+      if (r.ok) return await r.json();
+    } catch(e) {}
+  }
+
   return null;
 }
 
@@ -95,7 +120,34 @@ async function fetchCategories() {
 async function fetchChannels() {
   const l = document.getElementById('channelList'); if(l) l.innerHTML = '<div class="channel-loading"><i class="fas fa-spinner fa-spin"></i></div>';
   const d = await xtreamFetch(`/player_api.php?username=${XTREAM.user}&password=${XTREAM.pass}&action=get_live_streams`);
-  allChannels = d || []; displayedCount = 0; renderChannels(true);
+  allChannels = d || [];
+  if (allChannels.length === 0 && !d) {
+    // CORS/API completely failed
+    showCorsWarning();
+    return;
+  }
+  displayedCount = 0; renderChannels(true);
+}
+
+function showCorsWarning() {
+  const list = document.getElementById('channelList');
+  if (!list) return;
+  const isGH = location.hostname.includes('github.io');
+  list.innerHTML = `
+    <div class="channel-empty" style="padding:30px 20px">
+      <i class="fas fa-shield-halved" style="font-size:2rem;color:#ff6b6b;margin-bottom:12px;display:block"></i>
+      <p style="color:#ff6b6b;font-weight:600;margin:0 0 8px">⚠️ Streaming bloqué par le navigateur</p>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin:0 0 16px">
+        ${isGH 
+          ? 'GitHub Pages ne peut pas se connecter au serveur IPTV.<br><b>Lancez le site en local :</b>'
+          : 'Le serveur proxy local n\'a pas répondu.<br><b>Redémarrez avec server.py :</b>'}
+      </p>
+      <div style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;text-align:left;font-family:monospace;font-size:0.8rem;color:#ccc">
+        cd iptv-webapp<br>
+        python server.py
+      </div>
+      <button onclick="location.reload()" style="margin-top:16px;background:#673de6;color:#fff;border:none;padding:10px 28px;border-radius:8px;cursor:pointer;font-weight:600">↻ Réessayer</button>
+    </div>`;
 }
 
 async function fetchVodCategories() {
