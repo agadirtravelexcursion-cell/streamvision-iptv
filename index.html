@@ -39,6 +39,40 @@
 </head>
 <body>
 
+<!-- ===== PIN GATE ===== -->
+<div class="pin-overlay" id="pinOverlay">
+  <div class="pin-card">
+    <div class="pin-logo"><i class="fas fa-play"></i> StreamVision</div>
+    <h2 class="pin-title">Enter Access Code</h2>
+    <p class="pin-subtitle">Code d'accès requis pour le streaming</p>
+    <div class="pin-display" id="pinDisplay">
+      <span class="pin-dot" id="pinDot1"></span>
+      <span class="pin-dot" id="pinDot2"></span>
+      <span class="pin-dot" id="pinDot3"></span>
+      <span class="pin-dot" id="pinDot4"></span>
+      <span class="pin-dot" id="pinDot5"></span>
+      <span class="pin-dot" id="pinDot6"></span>
+      <span class="pin-dot" id="pinDot7"></span>
+      <span class="pin-dot" id="pinDot8"></span>
+    </div>
+    <div class="pin-error" id="pinError"></div>
+    <div class="pin-keypad">
+      <button class="pin-key" onclick="pinPress('1')">1</button>
+      <button class="pin-key" onclick="pinPress('2')">2</button>
+      <button class="pin-key" onclick="pinPress('3')">3</button>
+      <button class="pin-key" onclick="pinPress('4')">4</button>
+      <button class="pin-key" onclick="pinPress('5')">5</button>
+      <button class="pin-key" onclick="pinPress('6')">6</button>
+      <button class="pin-key" onclick="pinPress('7')">7</button>
+      <button class="pin-key" onclick="pinPress('8')">8</button>
+      <button class="pin-key" onclick="pinPress('9')">9</button>
+      <button class="pin-key pin-clear" onclick="pinClear()"><i class="fas fa-delete-left"></i></button>
+      <button class="pin-key" onclick="pinPress('0')">0</button>
+      <button class="pin-key pin-enter" onclick="pinSubmit()"><i class="fas fa-check"></i></button>
+    </div>
+  </div>
+</div>
+
 <!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="navbar">
   <div class="container">

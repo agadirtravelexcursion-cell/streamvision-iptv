@@ -1,3 +1,75 @@
+// ===== PIN GATE =====
+const PIN_CODE = '24021994';
+let pinInput = '';
+let pinVerified = false;
+
+// Check if already verified this session
+if (sessionStorage.getItem('pin_verified') === 'true') {
+  pinVerified = true;
+}
+
+function pinPress(digit) {
+  if (pinVerified) return;
+  if (pinInput.length >= 8) return;
+  pinInput += digit;
+  updatePinDisplay();
+}
+
+function pinClear() {
+  if (pinVerified) return;
+  pinInput = pinInput.slice(0, -1);
+  updatePinDisplay();
+}
+
+function updatePinDisplay() {
+  for (let i = 1; i <= 8; i++) {
+    const dot = document.getElementById('pinDot' + i);
+    if (i <= pinInput.length) {
+      dot.classList.add('filled');
+      dot.classList.remove('error');
+    } else {
+      dot.classList.remove('filled', 'error');
+    }
+  }
+  document.getElementById('pinError').textContent = '';
+}
+
+function pinSubmit() {
+  if (pinVerified) return;
+  if (pinInput === PIN_CODE) {
+    pinVerified = true;
+    sessionStorage.setItem('pin_verified', 'true');
+    document.getElementById('pinOverlay').classList.add('hidden');
+  } else {
+    // Shake animation on dots
+    for (let i = 1; i <= 8; i++) {
+      document.getElementById('pinDot' + i).classList.add('error');
+    }
+    document.getElementById('pinError').textContent = 'Code incorrect. Essayez encore.';
+    pinInput = '';
+    setTimeout(() => {
+      for (let i = 1; i <= 8; i++) {
+        document.getElementById('pinDot' + i).classList.remove('error');
+      }
+    }, 400);
+  }
+}
+
+// Show PIN overlay on load
+document.addEventListener('DOMContentLoaded', () => {
+  if (pinVerified) {
+    document.getElementById('pinOverlay').classList.add('hidden');
+  }
+});
+
+// Also support Enter key
+document.addEventListener('keydown', (e) => {
+  if (pinVerified) return;
+  if (e.key >= '0' && e.key <= '9') pinPress(e.key);
+  if (e.key === 'Backspace') pinClear();
+  if (e.key === 'Enter') pinSubmit();
+});
+
 let currentLang = localStorage.getItem('lang') || 'fr';
 let player = null;
 let allChannels = [], allCategories = [], vodCategories = [], seriesCategories = [];

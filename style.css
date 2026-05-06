@@ -400,3 +400,73 @@ input,textarea,select{font-family:var(--font);outline:none}
   .pcount{order:2}
   .pactions{order:3}
 }
+
+/* ===== PIN GATE ===== */
+.pin-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: radial-gradient(ellipse at center, #0a0a1a 0%, #050510 100%);
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(20px);
+}
+.pin-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 40px 32px;
+  width: 90%; max-width: 360px;
+  text-align: center; backdrop-filter: blur(30px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+.pin-logo {
+  font-size: 1.1rem; font-weight: 700; color: #673de6;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin-bottom: 20px;
+}
+.pin-logo i { font-size: 1.4rem; }
+.pin-title {
+  color: #fff; font-size: 1.25rem; font-weight: 600; margin: 0 0 6px;
+}
+.pin-subtitle {
+  color: rgba(255,255,255,0.45); font-size: 0.85rem; margin: 0 0 24px;
+}
+.pin-display {
+  display: flex; gap: 10px; justify-content: center; margin-bottom: 16px;
+}
+.pin-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.25);
+  transition: all 0.2s;
+}
+.pin-dot.filled {
+  background: #673de6; border-color: #673de6;
+  box-shadow: 0 0 12px rgba(103,61,230,0.5);
+}
+.pin-dot.error {
+  background: #ff4757; border-color: #ff4757; animation: shake 0.4s;
+}
+@keyframes shake {
+  0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)}
+  75%{transform:translateX(6px)}
+}
+.pin-error {
+  color: #ff4757; font-size: 0.8rem; min-height: 20px; margin-bottom: 8px;
+}
+.pin-keypad {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 10px;
+}
+.pin-key {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  color: #fff; font-size: 1.2rem; font-weight: 600;
+  padding: 16px 0; border-radius: 12px;
+  cursor: pointer; transition: all 0.15s;
+  user-select: none; -webkit-tap-highlight-color: transparent;
+}
+.pin-key:hover { background: rgba(255,255,255,0.12); }
+.pin-key:active { transform: scale(0.95); background: rgba(103,61,230,0.3); }
+.pin-clear { color: rgba(255,255,255,0.5); font-size: 1.1rem; }
+.pin-enter { 
+  background: #673de6; border-color: #673de6; color: #fff; font-size: 1.1rem;
+}
+.pin-enter:hover { background: #7c52f0; }
+.pin-overlay.hidden {
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
