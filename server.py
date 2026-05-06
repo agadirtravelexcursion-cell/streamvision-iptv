@@ -56,6 +56,7 @@ class ProxyHandler(http.server.SimpleHTTPRequestHandler):
             pass  # Suppress static file logs
 
 if __name__ == '__main__':
+    socketserver.TCPServer.allow_reuse_address = True
     print(f"""
 ╔══════════════════════════════════════╗
 ║    🎬 StreamVision IPTV Server       ║
