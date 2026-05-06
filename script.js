@@ -425,6 +425,29 @@ function setLang(lang) {
   document.documentElement.lang=lang; renderCatPills(); renderChannels(true);
 }
 
+// ===== THEME =====
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.getElementById('themeIcon');
+  const current = html.getAttribute('data-theme');
+  const next = current === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  if (icon) {
+    icon.className = next === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+  }
+}
+
+// Apply saved theme on load
+(function() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  const icon = document.getElementById('themeIcon');
+  if (icon) {
+    icon.className = saved === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+  }
+})();
+
 // ===== NAVBAR / FAQ / TUTORIALS / SCROLL / ANIMATIONS =====
 function initNavbar() { const n=document.getElementById('navbar'); if(n) window.addEventListener('scroll',()=>n.classList.toggle('scrolled',window.scrollY>50)); }
 function toggleMobileNav() { const n=document.getElementById('mobileNav'); if(n) n.classList.toggle('open'); }
