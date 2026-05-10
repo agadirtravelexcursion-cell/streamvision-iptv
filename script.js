@@ -130,26 +130,24 @@ function addRecent(ch) {
 const XTREAM = { host: 'http://smarters2026.sbs:8080', user: 'lxkbttgxyw', pass: '23mpvq5l7d' };
 
 async function xtreamFetch(endpoint) {
-  const action = endpoint.split('action=')[1] || '';
-  const extraParams = endpoint.match(/category_id=(\d+)/) ? `&category_id=${RegExp.$1}` : '';
-  const streamId = endpoint.match(/stream_id=(\d+)/) ? `&stream_id=${RegExp.$1}` : '';
-  const seriesId = endpoint.match(/series_id=(\d+)/) ? `&series_id=${RegExp.$1}` : '';
-  const fullXtreamUrl = `${XTREAM.host}/player_api.php?username=${XTREAM.user}&password=${XTREAM.pass}&action=${action}${extraParams}${streamId}${seriesId}`;
+  // Extract query part after '?'
+  const query = endpoint.split('?')[1] || '';
+  const proxied = `/api/xtream?${query}`;
 
   try {
-    const r = await fetch(`/api/xtream?username=${XTREAM.user}&password=${XTREAM.pass}&action=${action}${extraParams}${streamId}${seriesId}`, { signal: AbortSignal.timeout(15000) });
+    const r = await fetch(proxied, { signal: AbortSignal.timeout(15000) });
     if (r.ok) return await r.json();
   } catch(e) {}
 
   try {
-    const r = await fetch(fullXtreamUrl, { signal: AbortSignal.timeout(10000) });
+    const r = await fetch(`${XTREAM.host}${endpoint}`, { signal: AbortSignal.timeout(10000) });
     if (r.ok) return await r.json();
   } catch(e) {}
 
-  const encodedUrl = encodeURIComponent(fullXtreamUrl);
+  const encodedUrl = encodeURIComponent(`${XTREAM.host}${endpoint}`);
   const proxies = [
     `https://api.allorigins.win/raw?url=${encodedUrl}`,
-    `https://cors.eu.org/${fullXtreamUrl}`,
+    `https://cors.eu.org/${XTREAM.host}${endpoint}`,
   ];
   for (const proxy of proxies) {
     try {
@@ -648,12 +646,24 @@ function switchPlayerTab(tab, btn) {
   document.getElementById('livePanel').classList.toggle('hidden', tab !== 'live');
   document.getElementById('moviesPanel').classList.toggle('hidden', tab !== 'movies');
   document.getElementById('seriesPanel').classList.toggle('hidden', tab !== 'series');
-  const list = document.getElementById('channelList');
-  if (tab === 'live') { displayedCount = 0; renderChannels(true); }
-  else if (tab === 'movies') {
-    if (list) list.innerHTML = `<div class="channel-empty"><i class="fas fa-film"></i><p>${currentLang === 'fr' ? 'Sélectionnez une catégorie de films' : 'Select a movie category'}</p></div>`;
+  
+  if (tab === 'live') {
+    displayedCount = 0;
+    renderChannels(true);
+  } else if (tab === 'movies') {
+    // Switch to VOD categories view
+    const vodCategoriesContainer = document.getElementById('vodCategories');
+    const vodListContainer = document.getElementById('vodList');
+    if (vodCategoriesContainer) vodCategoriesContainer.innerHTML = '<div class="vod-group-title">📂 <span data-fr="Chargement des catégories..." data-en="Loading categories..."></span></div>';
+    if (vodListContainer) vodListContainer.innerHTML = '<div class="vod-group-title">📂 <span data-fr="Sélectionnez une catégorie" data-en="Select a category">Sélectionnez une catégorie</span></div>';
+    fetchVodCategories();
   } else if (tab === 'series') {
-    if (list) list.innerHTML = `<div class="channel-empty"><i class="fas fa-tv"></i><p>${currentLang === 'fr' ? 'Sélectionnez une catégorie de séries' : 'Select a series category'}</p></div>`;
+    // Switch to series categories view
+    const seriesCategoriesContainer = document.getElementById('seriesCategories');
+    const seriesListContainer = document.getElementById('seriesList');
+    if (seriesCategoriesContainer) seriesCategoriesContainer.innerHTML = '<div class="vod-group-title">📂 <span data-fr="Chargement des catégories..." data-en="Loading categories..."></span></div>';
+    if (seriesListContainer) seriesListContainer.innerHTML = '<div class="vod-group-title">📂 <span data-fr="Sélectionnez une catégorie" data-en="Select a category">Sélectionnez une catégorie</span></div>';
+    fetchSeriesCategories();
   }
 }
 
